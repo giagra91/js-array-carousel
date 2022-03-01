@@ -1,6 +1,6 @@
 const images = [`img/01.jpg`, `img/02.jpg`, `img/03.jpg`, `img/04.jpg`, `img/05.jpg`];
 const places = [`Lago di Como`, `Svizzera`, `Londra`, `Roma`, `Palermo`];
-const news = [`Lorem Ipsum`, `Lorem Ipsum`, `Lorem Ipsum`, `Lorem Ipsum`, `Lorem Ipsum`];
+const news = [`Lorem Ipsum`, `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fuga veritatis consequuntur commodi nobis suscipit.`, `Lorem Ipsum`, `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fuga veritatis consequuntur commodi nobis suscipit.`, `Lorem Ipsum`];
 
 let carouselContent = ``;
 let asideContent = ``;
