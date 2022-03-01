@@ -13,11 +13,6 @@ body{
     object-fit: cover; 
 }
 
-#picture-info{
-    bottom: 0;
-    right: 20px;
-}
-
 .my-aside-container{
     width: 200px;
     height: 80px;

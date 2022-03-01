@@ -1,15 +1,20 @@
+// Array con immagini
 const images = [`img/01.jpg`, `img/02.jpg`, `img/03.jpg`, `img/04.jpg`, `img/05.jpg`];
+// Array con luoghi
 const places = [`Lago di Como`, `Svizzera`, `Londra`, `Roma`, `Palermo`];
+// Array con notizie
 const news = [`Lorem Ipsum`, `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fuga veritatis consequuntur commodi nobis suscipit.`, `Lorem Ipsum`, `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo fuga veritatis consequuntur commodi nobis suscipit.`, `Lorem Ipsum`];
 
+// Inizializzo le variabili con cui verranno inseriti gli elementi nel file HTML
 let carouselContent = ``;
 let asideContent = ``;
 
+// Creo un ciclo for per 
 for (let i = 0; i < images.length; i++){
     carouselContent += `
     <div class="main-carousel position-relative ${i != 0 ? 'd-none' : ''}">
         <img src="${images[i]}" alt="Main picture">
-        <div class="text-white text-end position-absolute" id="picture-info">
+        <div class="text-white text-end position-absolute bottom-0 end-0 pe-2">
             <h3>${places[i]}</h3>
             <p>${news[i]}</p>
         </div>
