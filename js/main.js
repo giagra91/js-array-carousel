@@ -16,7 +16,7 @@ for (let i = 0; i < images.length; i++){
     </div>`
 
     asideContent += `
-    <div class="my-aside-container ${i != 0 ? '' : 'my-border-white'}">
+    <div class="my-aside-container ${i != 0 ? 'my-filter' : 'my-border-white'}">
     <img src="${images[i]}" alt="${places[i]}">
     </div>`
 }
@@ -38,10 +38,12 @@ let index = 0;
 const downButton = document.getElementById("down-arrow");
 downButton.addEventListener(`click`, function() {
     carouselElements[index].classList.add(`d-none`);
-    asideElements[index].classList.remove(`my-border-white`)
+    asideElements[index].classList.remove(`my-border-white`);
+    asideElements[index].classList.add(`my-filter`);
     index++;
     carouselElements[index].classList.remove(`d-none`);
-    asideElements[index].classList.add(`my-border-white`)
+    asideElements[index].classList.add(`my-border-white`);
+    asideElements[index].classList.remove(`my-filter`);
     console.log(index);
 
     if (index == 4){
@@ -53,10 +55,12 @@ downButton.addEventListener(`click`, function() {
 const upButton = document.getElementById("up-arrow");
 upButton.addEventListener(`click`, function() {
     carouselElements[index].classList.add(`d-none`);
-    asideElements[index].classList.remove(`my-border-white`)
+    asideElements[index].classList.remove(`my-border-white`);
+    asideElements[index].classList.add(`my-filter`);
     index--;
     carouselElements[index].classList.remove(`d-none`);
-    asideElements[index].classList.add(`my-border-white`)
+    asideElements[index].classList.add(`my-border-white`);
+    asideElements[index].classList.remove(`my-filter`);
 
     console.log(index)
     if (index < 0){
