@@ -21,7 +21,7 @@ for (let i = 0; i < images.length; i++){
 }
 
 const mainContainer = document.getElementById("main-container");
-mainContainer.innerHTML+=carouselContent;
+mainContainer.innerHTML=carouselContent;
 
 const asideContainer = document.getElementById("aside-container");
 asideContainer.innerHTML+=asideContent;
@@ -29,14 +29,23 @@ asideContainer.innerHTML+=asideContent;
 const carouselElements = document.getElementsByClassName(`main-carousel`);
 console.log(carouselElements);
 
-carouselElements[0].classList.add(`d-none`);
-
 let dNoneElements = 0;
 
 const downButton = document.getElementById("down-arrow");
 downButton.addEventListener(`click`, function() {
-    carouselElements[dNoneElements].classList.remove(`d-none`);
-    dNoneElements++;
     carouselElements[dNoneElements].classList.add(`d-none`);
+    dNoneElements++;
+    carouselElements[dNoneElements].classList.remove(`d-none`);
+
+    console.log(dNoneElements)
 })
 
+
+const upButton = document.getElementById("up-arrow");
+upButton.addEventListener(`click`, function() {
+    carouselElements[dNoneElements].classList.add(`d-none`);
+    dNoneElements--;
+    carouselElements[dNoneElements].classList.remove(`d-none`);
+
+    console.log(dNoneElements)
+})
