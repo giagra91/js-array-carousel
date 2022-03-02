@@ -9,7 +9,7 @@ const news = [`Lorem Ipsum`, `Lorem ipsum dolor sit amet consectetur adipisicing
 let carouselContent = ``;
 let asideContent = ``;
 
-// Creo un ciclo for per 
+// Creo un ciclo for per inserire i contenuti degli array nei div
 for (let i = 0; i < images.length; i++){
     carouselContent += `
     <div class="main-carousel position-relative ${i != 0 ? 'd-none' : ''}">
@@ -26,20 +26,26 @@ for (let i = 0; i < images.length; i++){
     </div>`
 }
 
+// Creo una variabile con cui prendo tramite id l'elemento dell'html dove inserire i nuovi elementi
 const mainContainer = document.getElementById("main-container");
 mainContainer.innerHTML=carouselContent;
 
+// Creo una variabile con cui prendo tramite id l'elemento dell'html dove inserire i nuovi elementi
 const asideContainer = document.getElementById("aside-container");
 asideContainer.innerHTML+=asideContent;
 
+// Creo una variabile con cui prendo tramite id l'elemento dell'html dove inserire i nuovi elementi
 const carouselElements = document.getElementsByClassName(`main-carousel`);
 console.log(carouselElements);
 
+// Creo una variabile con cui prendo tramite id l'elemento dell'html dove inserire i nuovi elementi
 const asideElements = document.getElementsByClassName("my-aside-container");
 console.log(asideElements);
 
+// Creo una variabile a cui do di base valore 0 e che mi servirà come posizione di partenza per l'addEventListener
 let index = 0;
 
+// addEventListener su down-arrow
 const downButton = document.getElementById("down-arrow");
 downButton.addEventListener(`click`, function() {
     carouselElements[index].classList.add(`d-none`);
@@ -49,14 +55,13 @@ downButton.addEventListener(`click`, function() {
     carouselElements[index].classList.remove(`d-none`);
     asideElements[index].classList.add(`my-border-white`);
     asideElements[index].classList.remove(`my-filter`);
-    console.log(index);
 
     if (index == 4){
-        // index = 0
         
     }
 })
 
+// addEventListener su up-arrow
 const upButton = document.getElementById("up-arrow");
 upButton.addEventListener(`click`, function() {
     carouselElements[index].classList.add(`d-none`);
@@ -67,7 +72,6 @@ upButton.addEventListener(`click`, function() {
     asideElements[index].classList.add(`my-border-white`);
     asideElements[index].classList.remove(`my-filter`);
 
-    console.log(index)
     if (index < 0){
         
     }
