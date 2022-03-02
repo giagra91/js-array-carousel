@@ -13,7 +13,7 @@ let asideContent = ``;
 for (let i = 0; i < images.length; i++){
     carouselContent += `
     <div class="main-carousel position-relative ${i != 0 ? 'd-none' : ''}">
-        <img src="${images[i]}" alt="Main picture">
+        <img src="${images[i]}" alt="${places[i]}">
         <div class="text-white text-end position-absolute bottom-0 end-0 pe-2">
             <h3>${places[i]}</h3>
             <p>${news[i]}</p>
